@@ -227,7 +227,7 @@ To analyze `.flow` files and categorize requests:
 
  ## Time
 
- Each extension takes around 30 minutes for evaluation of all 4 scenarios: control, search, browse, and summarize and needs approximately 700 MB of space.
+ Each extension takes around 30 minutes for evaluation of all 4 scenarios: control, search, browse, and summarize and needs approximately 700 MB of space on a typical laptop or desktop device
  
  ## Notes
 
