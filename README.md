@@ -25,7 +25,7 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
   This Python script parses `.flow` files into summarized CSV files, extracting key details about relevant flows. This includes timestamp, request domain, payload, response type, cookies, domain's parent organization and disconnect list based tracker's category.
 
 - **`generate_entity_domain_mapping.py`**  
-  This Python script parses individual entity-domain mapping files for each domain from DuckDuckGo's tracker-radar repository and generates a consolidated `ddg.json`. It maps domains to their parent organizations and is used to detect third-party relationships.
+  This Python script parses individual entity-domain mapping files for each domain from DuckDuckGo's tracker-radar repository and generates a consolidated `ddg.json`. It maps domains to their parent organizations and is used to detect third-party relationships. 
 
 ###  Data Files
 
@@ -33,7 +33,7 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
   Contains a classification of tracker domains from the Disconnect Tracking Protection List. It assigns categories (e.g., Analytics, Advertising, Social) to domains observed in network flows.
 
 - **`ddg.json`**  
-  Maps a domain to its parent organization entity based on DuckDuckGo’s tracker radar. This file is generated automatically by running `generate_entity_domain_mapping.py`. 
+  Maps a domain to its parent organization entity based on DuckDuckGo’s tracker radar. This file is generated automatically by running `generate_entity_domain_mapping.py`. The file we generated on our end was too big for GitHub. However, it can be accessed at [https://doi.org/10.5281/zenodo.15530229](https://doi.org/10.5281/zenodo.15530229).
 
 ###  Directories
 
