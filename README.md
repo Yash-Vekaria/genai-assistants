@@ -1,4 +1,6 @@
-# Auditing GenAI Assistants - Crawling Infrastructure Setup and Usage
+# Big Help or Big Brother? Auditing Tracking, Profiling, and Personalization in Generative AI Assistants
+
+## Crawling Infrastructure Setup and Usage
 
 ## Overview
 
