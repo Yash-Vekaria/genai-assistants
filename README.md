@@ -224,6 +224,11 @@ To analyze `.flow` files and categorize requests:
 - The resulting CSV file will be saved in the `Output` folder.
  
  ---
+
+ ## Time
+
+ Each extension takes around 30 minutes for evaluation of all 4 scenarios: control, search, browse, and summarize and needs approximately 700 MB of space.
+ 
  ## Notes
 
 - The installation and certificate import process may vary slightly depending on your operating system. For detailed instructions, refer to [this blog post](https://scrapfly.io/blog/how-to-install-mitmproxy-certificate/).
