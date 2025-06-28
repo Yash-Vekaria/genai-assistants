@@ -91,6 +91,11 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
      /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
      ```
 
+   - For Linux, the typical path is:
+     ```
+     /usr/bin/google-chrome
+     ```
+
    - Run the following command to start Chrome with the Mitmproxy proxy server.
 
      For Windows 11, the required command is:
@@ -101,6 +106,11 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
      For macOS, the required command is (you may need to escape spaces in the path with `\`):
      ```
      /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --proxy-server="localhost:8080" --user-data-dir="/Users/<YourUsername>/Library/Application Support/Google/Chrome/Profile<ProfileNumber>"
+     ```
+  
+     For macOS, the required command is (you may need to escape spaces in the path with `\`):
+     ```
+     /usr/bin/google-chrome --proxy-server="localhost:8080" --user-data-dir="/home/<YourUsername>/.config/google-chrome/Profile<ProfileNumber>"
      ```
 
      Replace `<YourUsername>` and `<ProfileNumber>` with appropriate values.
@@ -136,7 +146,11 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
      ```
      For macOS:
      ```
-     mitmweb.exe -w  <flowFileName>.flow
+     mitmweb -w  <flowFileName>.flow
+     ```
+     For Linux:
+     ```
+     mitmweb -w  <flowFileName>.flow
      ```
      
 
@@ -152,6 +166,11 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
      **For macOS:**
      ```
      /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --proxy-server="localhost:8080" --user-data-dir="/Users/<YourUsername>/Library/Application Support/Google/Chrome/Profile<ProfileNumber>"
+     ```
+
+     **For Linux:**
+     ```
+     /usr/bin/google-chrome --proxy-server="localhost:8080" --user-data-dir="/home/<YourUsername>/.config/google-chrome/Profile<ProfileNumber>"
      ```
 
      Replace `<YourUsername>` and `<ProfileNumber>` with the appropriate values for your system.
