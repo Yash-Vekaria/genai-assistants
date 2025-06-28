@@ -108,7 +108,7 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
      /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --proxy-server="localhost:8080" --user-data-dir="/Users/<YourUsername>/Library/Application Support/Google/Chrome/Profile<ProfileNumber>"
      ```
   
-     For macOS, the required command is (you may need to escape spaces in the path with `\`):
+     For Linux, the required command is (you may need to escape spaces in the path with `\`):
      ```
      /usr/bin/google-chrome --proxy-server="localhost:8080" --user-data-dir="/home/<YourUsername>/.config/google-chrome/Profile<ProfileNumber>"
      ```
