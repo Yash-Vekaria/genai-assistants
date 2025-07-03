@@ -62,11 +62,13 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
 
 ## Installation
 
+As a framework to audit and evaluate browser assistants for their data collection, storage, and sharing of information, we propose a man-in-the-middle approach. The goal is to install and configure Mitmproxy in your Chrome browser by installing necessary certificates so that all network traffic that flows out from the browser (in presence of the browser extension) is captured in its unecrypted form by this proxy. 
+
 1. **Download Mitmproxy**
 
-   - Visit the [official Mitmproxy website](https://mitmproxy.org/) and follow installation guidelines for your operating system.
+   - Visit the [official Mitmproxy website](https://mitmproxy.org/) and follow installation guidelines for your operating system to install the proxy on your device.
 
-2. **Install Mitmproxy Certificate**
+2. **Extract Chrome Executable and Profile Paths to Automatically Launch Chrome Session**
 
    - Start Mitmproxy or Mitmweb by running the `mitmweb` command in the terminal.
    - Create a new Chrome profile:
@@ -79,7 +81,7 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
      - Open Chrome and navigate to `chrome://version/`.
      - Take note of the `Executable Path` and `Profile Path`. These paths will be useful for setting up the proxy.
 
-3. **Configure Chrome with Mitmproxy**
+3. **Start a Chrome Session**
 
    - Open the terminal and navigate to the Chrome executable. For Windows 11, the typical path is:
      ```
@@ -115,14 +117,14 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
 
      Replace `<YourUsername>` and `<ProfileNumber>` with appropriate values.
 
-4. **Download and Install the Certificate**
+4. **Download and Install the Certificate in the Opened Session**
 
    - Visit `mitm.it` in the Chrome instance configured above.
    - Download the Mitmproxy certificate.
    - Install the certificate by:
      - Navigating to Chrome's settings: `Settings → Privacy and Security → Security`.
      - Selecting **Manage Certificates** and importing the downloaded certificate into the **Trusted Root Certification Authorities**.
-   - Follow the prompts to complete the installation.
+   - Follow the prompts to complete the installation. The installed certificates will be available in future sessions as well, without needing to install them every time afresh.
 
 5. **Verify Certificate Installation**
 
@@ -136,9 +138,11 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
 
 ## Usage
 
+Now that the Mitmproxy is installed and configured in your Chrome browser, we can audit any browser assistant. This section explains how to capture and save the detailed network traffic with Mitmproxy while performing any experiment with a browser extension. 
+
 1. **Start Mitmproxy Web Interface**
   
-   - Run the following command to start Mitmproxy with a flow file to log intercepted traffic.
+   - Run the following command to start Mitmproxy with a flow file to log intercepted traffic. This terminal will act a an Mitmproxy server, capturing and logging all intercepted network traffic in the provided flow file.
   
      For Windows:
      ```
@@ -156,7 +160,7 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
 
 3. **Launch Chrome with Proxy Configuration**
    
-     - In another terminal, execute the appropriate command depending on your operating system:
+     - In another terminal, execute the appropriate command depending on your operating system to launch a Chrome session with Mitmproxy:
 
      **For Windows:**
      ```
@@ -180,9 +184,9 @@ Our framework and analysis pipeline aims to provide a reproducible methodology f
 
 5. **Install GenAI Extension**
 
-   - Install a Generative AI browser extension from the official Chrome Web Store.
+   - Install a Generative AI browser extension to audit from the official Chrome Web Store. To evaluate this browser extension, different interactions can be performed with the extension. If you are interested in performing the exact experiments performed in this paper with GenAI browser assistants, refer to Section 5 of the paper for more details. 
 
-6. **Inspect Traffic**
+6. **Inspect Traffic** (Optional)
 
    - Use Mitmproxy’s web interface to monitor and analyze intercepted HTTP/S traffic.
 
