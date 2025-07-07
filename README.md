@@ -225,7 +225,7 @@ This tool analyzes `.flow` files and extract data into CSV format.
    pip install -r requirements.txt
    ```
 2. **Download Benchmarks**:
-   For disconnect list, download services.json from https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json, place it inside the current working directory, and rename it to disconnect.json. For generating DuckDuckGo’s mapping, run the following command anywhere and then place the resultantly generated disconnect.json in the current working directory.
+   For disconnect list, download services.json from https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json, place it inside the current working directory, and rename it to disconnect.json. This JSON file comprises of an up-to-date classification of trackers (or tracking domains) into one of the following categories: Email, EmailAggressive, Advertising, Content, Analytics, FingerprintingInvasive, FingerprintingGeneral, Anti-fraud, Social, ConsentManagers, and Cryptomining. We use this mapping to label and identify the network request endpoints that are ATS (i.e., advertising and tracking services). For generating DuckDuckGo’s mapping, run the following command anywhere and then place the resultantly generated ddg.json in the current working directory. This JSON file maps domains to their parent/owner organizations allowing us to group together entities that are related to one other in order to accurately classify them as first-party or third-party. It is important to use the latest version of these JSON files since an outdated version of the mapping could result in an incomplete or inaccurate classification.
    ```bash
    python3 generate_entity_domain_mapping.py
    ```
