@@ -154,7 +154,7 @@ Now that the Mitmproxy is installed and configured in your Chrome browser, we ca
      ```
      For Linux:
      ```
-     mitmweb -w  <flowFileName>.flow
+     ./mitmweb -w  <flowFileName>.flow
      ```
      
 
